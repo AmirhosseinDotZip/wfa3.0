@@ -10,25 +10,6 @@ const Analyzer: FC = () => {
         setResults(Object.entries(frequencyMap).map(([word, frequency]) => ({ word, frequency })));
     }
 
-    function XhandleDownload() {
-        if (results) {
-            const data: { [key: string]: number } = {};
-            results.forEach(({ word, frequency }) => {
-                data[word] = frequency;
-            });
-            const currentDate = new Date().toISOString().substring(0, 10);
-            const currentTime = new Date().toLocaleTimeString().replace(/:/g, '');
-            const fileName = `word_frequency_${currentDate}_${currentTime}.json`;
-            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(data));
-            const downloadAnchorNode = document.createElement('a');
-            downloadAnchorNode.setAttribute("href", dataStr);
-            downloadAnchorNode.setAttribute("download", fileName);
-            document.body.appendChild(downloadAnchorNode);
-            downloadAnchorNode.click();
-            downloadAnchorNode.remove();
-        }
-    }
-
     function handleDownload() {
         if (results) {
             const data = results.reduce((obj, { word, frequency }) => ({ ...obj, [word]: frequency }), {});
@@ -50,24 +31,28 @@ const Analyzer: FC = () => {
                     rows={12}
                     value={text}
                     onChange={(event) => setText(event.target.value)}
-                    className="w-[1000px] p-4 rounded-md shadow-md text-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-[1000px] p-4 rounded-md shadow-md text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 opacity-70"
                 />
                 <div className="flex justify-center gap-4">
                     <button
                         type="submit"
-                        className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md transition duration-300 ease-in-out"
+                        className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md transition duration-300 ease-in-out"
                     >
                         Analyze
                     </button>
                     {results && (
                         <button
                             onClick={handleDownload}
-                            className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-md transition duration-300 ease-in-out"
+                            className="inline-flex items-center bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-md transition duration-300 ease-in-out"
                         >
-                            Download as JSON
+                            <svg className="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
+                            </svg>
+                            Download JSON
                         </button>
                     )}
                 </div>
+
             </form>
 
             {results && (
@@ -102,3 +87,6 @@ interface WordFrequency {
     word: string;
     frequency: number;
 }
+
+
+
