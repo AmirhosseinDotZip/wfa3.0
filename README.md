@@ -1,38 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Word Frequency Analyzer
 
-## Getting Started
+[![ambient-work - WFA3.0](https://img.shields.io/badge/ambient--work-WFA3.0-2ea44f?style=for-the-badge&logo=github)](https://github.com/ambient-work/wfa3.0/)
+[![Extrempty - Dev](https://img.shields.io/badge/Extrempty-Dev-89CFF0?style=for-the-badge&logo=telegram)](https://github.com/ambient-work/wfa3.0/)
+[![Made with - Next JS](https://img.shields.io/badge/Made_with-Next_JS-C0C2C9?style=for-the-badge&logo=vercel)](https://github.com/ambient-work/wfa3.0/)
+[![in - Development](https://img.shields.io/badge/in-Development-ac3ccf?style=for-the-badge&logo=visualstudiocode)](https://github.com/ambient-work/wfa3.0/)
 
-First, run the development server:
+Analyze the frequency of words in a text and download the results in JSON format.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+![Word Frequency Analyzer Demo](public/wfa3_demo.gif)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Quickstart
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+To get started:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+1. Clone this repository.
+2. Navigate to the project folder and run `npm install` to install the dependencies.
+3. Run `npm run dev` to start the development server.
+4. Open your browser and navigate to [http://localhost:3000](http://localhost:3000).
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## What's inside?
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+This project uses Next.js for server-side rendering and React for building the user interface. The main component in this project is `Analyzer`, which renders a form with a textarea input and two buttons: one to analyze the text in the input, and another to download the results in JSON format. 
 
-## Learn More
+The `countWords` function takes a string of text as input and returns an object with key-value pairs where the keys are individual words in the text and the values are the frequency of each word. When the user submits the form, the `handleSubmit` function is called, which uses the `countWords` function to count the frequencies of the words in the input text and sets the results state using the `setResults` function.
 
-To learn more about Next.js, take a look at the following resources:
+If there are results, the component renders a grid of boxes displaying each word and its frequency. When the user clicks the download button, the `handleDownload` function creates a temporary anchor link with a `data:` URI containing the JSON-encoded results data, sets the `download` attribute to a filename based on the current date and time, triggers a click event on the anchor link, and then removes the anchor element from the DOM.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+This project is licensed under the MIT license.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Made with ❤️ by Little B.

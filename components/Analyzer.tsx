@@ -36,14 +36,14 @@ const Analyzer: FC = () => {
                 <div className="flex justify-center gap-4">
                     <button
                         type="submit"
-                        className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md transition duration-300 ease-in-out"
+                        className="inline-block bg-gradient-to-r from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-700 text-white font-medium py-2 px-4 rounded-md transition duration-300 ease-in-out"
                     >
                         Analyze
                     </button>
                     {results && (
                         <button
                             onClick={handleDownload}
-                            className="inline-flex items-center bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-md transition duration-300 ease-in-out"
+                            className="inline-flex items-center bg-gradient-to-r from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 text-white font-medium py-2 px-4 rounded-md transition duration-300 ease-in-out"
                         >
                             <svg className="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                 <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
