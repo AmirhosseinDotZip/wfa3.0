@@ -32,4 +32,4 @@ This project is licensed under the MIT license.
 
 ---
 
-Made with ❤️ by Little B.
+Made with ❤️ by Baniminator
