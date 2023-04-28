@@ -7,7 +7,7 @@
 
 Analyze the frequency of words in a text and download the results in JSON format.
 
-![Word Frequency Analyzer Demo](public/wfa3_demo.gif)
+![Word Frequency Analyzer Demo](wfa3_demo.gif)
 
 ## Quickstart
 
