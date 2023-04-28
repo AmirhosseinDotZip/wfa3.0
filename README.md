@@ -9,6 +9,11 @@ Analyze the frequency of words in a text and download the results in JSON format
 
 ![Word Frequency Analyzer Demo](wfa3_demo.gif)
 
+
+https://user-images.githubusercontent.com/101447196/235105522-8fa220aa-1863-4b74-a97a-b812c550673e.mp4
+
+
+
 ## Quickstart
 
 To get started:
