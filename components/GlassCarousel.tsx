@@ -6,7 +6,6 @@ interface GlassCarouselProps { }
 const GlassCarousel: FC<GlassCarouselProps> = ({ }) => {
     const [cards, setCards] = useState([
         { id: 0, title: "angular", imagePath: "/fws/angular.svg" },
-
         { id: 1, title: "Laravel", imagePath: "/fws/laravel.svg" },
         { id: 2, title: "react", imagePath: "/fws/react.svg" },
         { id: 3, title: "next js", imagePath: "/fws/nextjs.svg" },
@@ -16,6 +15,7 @@ const GlassCarousel: FC<GlassCarouselProps> = ({ }) => {
         { id: 7, title: "spring", imagePath: "/fws/bootspring.svg" },
         { id: 8, title: "ruby", imagePath: "/fws/ruby.svg" },
         { id: 9, title: "flask", imagePath: "/fws/flask.svg" },
+        { id: 10, title: "svelte", imagePath: "/fws/svelte.svg" },
 
     ]);
 
@@ -38,7 +38,7 @@ const GlassCarousel: FC<GlassCarouselProps> = ({ }) => {
     }
 
     return (
-        <div className="flex justify-between items-center gap-7">
+        <div className="flex justify-between items-center gap-7 mt-3">
             <svg
                 className="h-12 select-none"
                 fill="transparent"
