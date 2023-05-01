@@ -40,7 +40,7 @@ const GlassCarousel: FC<GlassCarouselProps> = ({ }) => {
     return (
         <div className="flex justify-between items-center gap-7 mt-3">
             <svg
-                className="h-12 select-none"
+                className="h-12 select-none cursor-pointer hover:scale-110 transition-all duration-300"
                 fill="transparent"
                 viewBox="0 0 24 24"
                 stroke="white"
@@ -64,7 +64,7 @@ const GlassCarousel: FC<GlassCarouselProps> = ({ }) => {
                 ))}
             </div>
             <svg
-                className="h-12 select-none"
+                className="h-12 select-none cursor-pointer hover:scale-110 transition-all duration-300"
                 fill="transparent"
                 viewBox="0 0 24 24"
                 stroke="white"
