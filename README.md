@@ -5,9 +5,9 @@
 [![Made with - Next JS](https://img.shields.io/badge/Made_with-Next_JS-C0C2C9?style=for-the-badge&logo=vercel)](https://github.com/ambient-work/wfa3.0/)
 [![in - Development](https://img.shields.io/badge/in-Development-ac3ccf?style=for-the-badge&logo=visualstudiocode)](https://github.com/ambient-work/wfa3.0/)
 
-Analyze the frequency of words in a text and download the results in JSON format.
+## Analyze the frequency of words in a text and download the results in JSON format.
 
-
+#### 🚀 in development, contributions are welcome 
 
 <!-- <details>
 <summary>Demo gif</summary>
